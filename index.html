@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conflict - Spec Build</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="top-bar"><h1>Conflict</h1><div class="resources"><span>Mana <strong id="mana">0</strong></span><span>Stage <strong id="stageNo">T1</strong></span></div></header>
+    <section class="layout">
+      <section>
+        <section id="grid" class="grid"></section>
+        <section class="controls">
+          <button class="unit-btn active" data-unit="pawn">Pawn</button>
+          <button class="unit-btn" data-unit="knight">Knight</button>
+          <button class="unit-btn" data-unit="bishop">Bishop</button>
+          <button class="unit-btn" data-unit="rook">Rook</button>
+          <button class="unit-btn" data-unit="queen">Queen</button>
+          <button id="skillBtn">King Skill</button>
+          <button id="nextStageBtn">Next</button>
+        </section>
+        <p id="message"></p>
+      </section>
+      <aside class="lore">
+        <section class="card"><h2>シナリオ</h2><h3 id="stageTitle"></h3><p id="stagePart"></p></section>
+        <section class="card"><h2>キャラクター</h2><select id="characterSelect"></select><p id="charQuote"></p><pre id="charStats"></pre><p id="charSkills"></p></section>
+        <section class="card"><h2>進行システム</h2><ul><li>フラグメント・レベル</li><li>イデア・ツリー</li><li>親密度（共鳴値）</li><li>クラスチェンジ</li></ul><p>※UIはプロトタイプ段階。仕様書準拠で段階実装中。</p></section>
+        <section class="card"><h2>育成プロトタイプ</h2><label>育成対象 <select id="growthChar"></select></label><p id="growthStats"></p><div class="controls"><button id="feedExpBtn">フラグメント投入(+EXP)</button><button id="unlockNodeBtn">イデア解放</button></div><p id="growthMsg"></p></section>
+
+        <section class="card"><h2>年表</h2><ul id="timeline"></ul></section>
+        <section class="card"><h2>分岐エンディング</h2><ul id="endings"></ul><button id="simulateEndBtn">現在状態で分岐判定</button><p id="endingResult"></p></section>
+        <section class="card"><h2>ステージ一覧</h2><div id="stageList" class="stage-list"></div></section>
+      </aside>
+    </section>
+  </main>
+  <script type="module" src="game.js"></script>
+</body>
+</html>
