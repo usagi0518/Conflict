@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conflict - Vertical Slice</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="top-bar">
+        <h1>Conflict</h1>
+        <div class="resources">
+          <span>Mana: <strong id="mana">0</strong></span>
+          <span>Cost: <strong id="selectedCost">2</strong></span>
+          <span>Stage: <strong id="stageNo">T1</strong></span>
+        </div>
+      </header>
+
+      <section class="status-panel">
+        <div class="base ally">ALLY KING HP <strong id="allyHp">100</strong></div>
+        <div class="base enemy">ENEMY KING HP <strong id="enemyHp">100</strong></div>
+        <button id="nextStageBtn">次のステージへ</button>
+      </section>
+
+      <section class="layout">
+        <div>
+          <section id="grid" class="grid" aria-label="battlefield"></section>
+          <section class="controls">
+            <button class="unit-btn active" data-unit="pawn">Pawn (2)</button>
+            <button class="unit-btn" data-unit="knight">Knight (4)</button>
+            <button class="unit-btn" data-unit="bishop">Bishop (5)</button>
+            <button class="unit-btn" data-unit="rook">Rook (6)</button>
+            <button id="skillBtn">King Skill</button>
+          </section>
+          <p id="message" class="message">左側3列にユニットを配置して敵キングを倒そう。</p>
+        </div>
+
+        <aside class="lore">
+          <section class="card">
+            <h2>Stage Story</h2>
+            <h3 id="stageTitle">-</h3>
+            <p id="stageDesc"></p>
+          </section>
+          <section class="card">
+            <h2>Character Codex</h2>
+            <select id="characterSelect"></select>
+            <p id="charQuote" class="quote"></p>
+            <ul id="charMeta"></ul>
+            <p id="charProfile"></p>
+          </section>
+        </aside>
+      </section>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
