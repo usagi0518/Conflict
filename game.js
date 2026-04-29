@@ -42,3 +42,5 @@ document.querySelectorAll('.unit-btn').forEach(b=>b.onclick=()=>{ document.query
 el.skillBtn.onclick=skill; el.nextStageBtn.onclick=nextStage; el.feedExpBtn.onclick=()=>rewardGrowth(10); el.unlockNodeBtn.onclick=()=>unlockIdea(el.growthChar.value || CAST[0].id); el.simulateEndBtn.onclick=evaluateEnding;
 
 makeGrid(); initCodex(); setStage(0); setInterval(tick,1000);
+
+// merged-state: conflict resolution baseline
